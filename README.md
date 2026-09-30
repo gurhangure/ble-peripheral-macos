@@ -1,6 +1,6 @@
 # BLE Peripheral for macOS
 
-A small native macOS BLE peripheral built with Swift and CoreBluetooth. It is designed to act as a controllable GATT device for testing BLE client applications such as the companion Flutter project `ble-device-monitor`.
+A small native macOS BLE peripheral built with Swift and CoreBluetooth. It is designed to act as a controllable GATT device for testing BLE client applications such as the companion Flutter project [`ble-device-monitor`](https://github.com/gurhangure/ble-device-monitor).
 
 ## Features
 
@@ -22,7 +22,10 @@ A small native macOS BLE peripheral built with Swift and CoreBluetooth. It is de
 Example notification payload:
 
 ```json
-{"status":"active","battery":87}
+{
+  "status": "active",
+  "battery": 87
+}
 ```
 
 ## Requirements
@@ -68,7 +71,7 @@ Sources/BLEPeripheral/
 
 This peripheral is designed to work with the Flutter BLE client:
 
-[ble-device-monitor](https://github.com/gurhangure/ble-device-monitor)
+[`ble-device-monitor`](https://github.com/gurhangure/ble-device-monitor)
 
 ## Purpose
 
