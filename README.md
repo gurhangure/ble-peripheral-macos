@@ -1,6 +1,8 @@
 # BLE Peripheral for macOS
 
-A small native macOS BLE peripheral built with Swift and CoreBluetooth. It is designed to act as a controllable GATT device for testing BLE client applications such as the companion Flutter project [`ble-device-monitor`](https://github.com/gurhangure/ble-device-monitor).
+A small native macOS BLE peripheral built with Swift and CoreBluetooth.
+
+It acts as a controllable GATT device for testing BLE client applications such as the companion Flutter project [`ble-device-monitor`](https://github.com/gurhangure/ble-device-monitor).
 
 ## Features
 
@@ -10,7 +12,7 @@ A small native macOS BLE peripheral built with Swift and CoreBluetooth. It is de
 - Sends JSON status notifications every two seconds
 - Simulates a changing battery level
 - Handles notification backpressure through `peripheralManagerIsReady(toUpdateSubscribers:)`
-- Logs subscriptions, reads, advertising state, and outgoing notifications
+- Logs advertising state, subscriptions, read requests, and outgoing notifications
 
 ## GATT Contract
 
@@ -31,12 +33,19 @@ Example notification payload:
 ## Requirements
 
 - macOS 13 or later
-- Swift 6 toolchain / Xcode command-line tools
+- Swift 6 toolchain
+- Xcode command-line tools
 - Bluetooth enabled on the Mac
 
-## Run
+## Build
 
 From the repository root:
+
+```bash
+swift build
+```
+
+## Run
 
 ```bash
 swift run ble-peripheral
@@ -73,6 +82,10 @@ This peripheral is designed to work with the Flutter BLE client:
 
 [`ble-device-monitor`](https://github.com/gurhangure/ble-device-monitor)
 
+The Flutter client handles discovery, connection management, GATT service discovery, live notifications, device status display, and automatic reconnection after unexpected connection loss.
+
 ## Purpose
 
-This repository is a focused demonstration project for BLE development and testing. It is not intended to emulate any specific commercial device or proprietary protocol.
+This repository is a focused demonstration project for native BLE peripheral development and testing on macOS.
+
+It is not intended to emulate any specific commercial device or proprietary protocol.
