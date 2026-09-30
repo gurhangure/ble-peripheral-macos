@@ -66,7 +66,9 @@ Sources/BLEPeripheral/
 
 ## Companion Client
 
-This project is intended to work with the Flutter `ble-device-monitor` repository, which scans for the peripheral, connects to the GATT service, subscribes to live notifications, and handles unexpected disconnects with automatic reconnection.
+This peripheral is designed to work with the Flutter BLE client:
+
+[ble-device-monitor](https://github.com/gurhangure/ble-device-monitor)
 
 ## Purpose
 
