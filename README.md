@@ -39,8 +39,6 @@ Example notification payload:
 
 ## Build
 
-From the repository root:
-
 ```bash
 swift build
 ```
